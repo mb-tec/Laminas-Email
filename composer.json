@@ -1,0 +1,65 @@
+{
+  "name": "mb-tec/laminas-email",
+  "description": "E-Mail Service for Laminas Framework",
+  "homepage": "https://github.com/mb-tec/Laminas-Email",
+  "type": "library",
+  "license": "GPL-2.0",
+  "keywords": [
+    "mb-tec",
+    "email",
+    "laminas",
+    "framework"
+  ],
+  "authors": [
+    {
+      "name": "Matthias Büsing",
+      "email": "info@mb-tec.eu",
+      "homepage": "https://www.mb-tec.eu",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.0",
+    "laminas/laminas-mail": "^2.0",
+    "laminas/laminas-view": "^2.0",
+    "laminas/laminas-servicemanager": "^3.2",
+    "html2text/html2text": "^4.0",
+    "laminas/laminas-modulemanager": "^2.8"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.7",
+    "laminas/laminas-coding-standard": "^1.0",
+    "phpunit/phpunit": "^5.7",
+    "phpmd/phpmd": "^2.5",
+    "sebastian/phpcpd": "^2.0",
+    "phploc/phploc": "^3.0",
+    "phan/phan": "^2.6"
+  },
+  "autoload": {
+    "psr-0": {
+      "MBtec\\LaminasEmail\\": "src/"
+    },
+    "psr-4": {
+      "MBtec\\LaminasEmail\\": "src/"
+    },
+    "classmap": [
+      "./Module.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MBtec\\LaminasEmail\\Test\\": "./test/"
+    }
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "phpcpd": "phpcpd",
+    "phpmd": "phpmd",
+    "phploc": "phploc src",
+    "phpunit": "phpunit --colors=always",
+    "phan": "phan"
+  }
+}
