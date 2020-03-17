@@ -71,7 +71,6 @@ script:
   ## PHAN
   - if [[ $CHECK_PHAN == 'true' ]]; then composer phan ; fi
   ## PHPUNIT
-  - composer phpunit
 
 notifications:
   email:
