@@ -50,6 +50,7 @@ matrix:
         - CHECK_CPD=true
         - CHECK_MD=true
         - CHECK_LOC=true
+        - CHECK_PHAN=true
     - php: 7.4
       env:
         - DEPS=lowest
@@ -91,6 +92,8 @@ script:
   - if [[ $CHECK_MD == 'true' ]]; then composer phpmd src text unusedcode ; fi
   ## PHPLOC
   - if [[ $CHECK_LOC == 'true' ]]; then composer phploc src ; fi
+  ## PHAN
+  - if [[ $CHECK_PHAN == 'true' ]]; then composer phan ; fi
   ## PHPUNIT
   - composer phpunit
 
