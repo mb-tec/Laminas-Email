@@ -210,7 +210,7 @@ class Message
         $message->setBody($content);
 
         $headers = $message->getHeaders();
-        $headers->addHeaderLine('Content-Type', Mime\Mime::MULTIPART_ALTERNATIVE);
+        $headers->get('Content-Type')->setType(Mime\Mime::MULTIPART_ALTERNATIVE);
 
         return $this;
     }
