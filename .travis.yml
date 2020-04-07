@@ -20,7 +20,6 @@ matrix:
     - php: 7.3
       env:
         - DEPS=latest
-        - CHECK_PHAN=true
     - php: 7.4
       env:
         - DEPS=lowest
@@ -30,6 +29,7 @@ matrix:
     - php: 7.4
       env:
         - DEPS=latest
+        - CHECK_PHAN=true
 
 before_install:
   - travis_retry composer self-update

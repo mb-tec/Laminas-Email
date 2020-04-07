@@ -209,8 +209,10 @@ class Message
         $content = $this->getContentMessage($html, $plain);
         $message->setBody($content);
 
-        $headers = $message->getHeaders();
-        $headers->get('Content-Type')->setType(Mime\Mime::MULTIPART_ALTERNATIVE);
+        /** @var \Laminas\Mail\Header\ContentType $header */
+        $header = $message->getHeaders()->get('Content-Type');
+        /* @phan-suppress-next-line PhanUndeclaredMethod */
+        $header->setType(Mime\Mime::MULTIPART_ALTERNATIVE);
 
         return $this;
     }
