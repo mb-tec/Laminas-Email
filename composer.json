@@ -3,7 +3,7 @@
   "description": "E-Mail Service for Laminas Framework",
   "homepage": "https://github.com/mb-tec/Laminas-Email",
   "type": "library",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "keywords": [
     "mb-tec",
     "email",
@@ -18,15 +18,15 @@
       "role": "Developer"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
     "php": "^7.3",
     "laminas/laminas-mail": "^2.0",
     "laminas/laminas-view": "^2.0",
     "laminas/laminas-servicemanager": "^3.2",
-    "html2text/html2text": "^4.0",
-    "laminas/laminas-modulemanager": "^2.8"
+    "laminas/laminas-modulemanager": "^2.8",
+    "html2text/html2text": "^4.0"
   },
   "require-dev": {
     "laminas/laminas-coding-standard": "^1.0",
